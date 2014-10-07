@@ -43,5 +43,14 @@ public class GildedRoseTest {
         }
 
         assertEquals(0, normalItem.quality);
+   }
+
+    @Test
+    public void itemQualityDegradesTwiceAsFastAfterSellByHasPassed() {
+        for (int i = 0; i < SELL_IN + 2; i++) {
+            gildedRose.updateQuality();
+        }
+
+        assertEquals(QUALITY - 14, normalItem.quality);
     }
 }
