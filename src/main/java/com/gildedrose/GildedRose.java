@@ -15,16 +15,14 @@ class GildedRose {
                 AgedBrie theItem = (AgedBrie) item;
                 theItem.updateQuality();
             } else if (isSulfuras(item)) {
-                updateSulfuras(item);
+                Sulfuras theItem = (Sulfuras) item;
+                theItem.updateQuality();
             } else if (isBackStagePass(item)) {
                 updateBackstagePass(item);
             } else {
                 updateNormalItem(item);
             }
         }
-    }
-
-    private void updateSulfuras(Item item) {
     }
 
     private boolean isSulfuras(Item item) {
@@ -35,7 +33,6 @@ class GildedRose {
         item.sellIn--;
         int sellIn = item.sellIn;
         int newQuality = item.quality;
-
 
         if (isBetween(sellIn, 5, 10)) {
             newQuality += 2;
