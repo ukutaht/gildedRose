@@ -13,6 +13,8 @@ class GildedRose {
 
             if (isAgedBrie(item)) {
                 updateAgedBrie(item);
+            } else if (isBackStagePass(item)) {
+                updateBackstagePass(item);
             } else if (isNormalItem(item)) {
                 updateNormalItem(item);
             } else {
@@ -43,7 +45,6 @@ class GildedRose {
                         }
                     }
                 }
-
                 if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
                     item.sellIn = item.sellIn - 1;
                 }
@@ -69,6 +70,29 @@ class GildedRose {
         }
     }
 
+    private void updateBackstagePass(Item item) {
+        item.sellIn--;
+        int sellIn = item.sellIn;
+        int newQuality = item.quality;
+
+
+        if (isBetween(sellIn, 5, 10)) {
+            newQuality += 2;
+        } else if (isBetween(sellIn, 0, 5)) {
+            newQuality += 3;
+        } else if (sellIn < 0) {
+            newQuality = 0;
+        } else {
+            newQuality++;
+        }
+
+        item.quality = Math.min(newQuality, 50);
+    }
+
+    private boolean isBackStagePass(Item item) {
+        return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
+    }
+
     private void updateAgedBrie(Item item) {
         item.sellIn--;
         int newQuality = item.sellIn < 0 ? item.quality + 2 : item.quality + 1;
@@ -86,6 +110,10 @@ class GildedRose {
     }
 
     private boolean isNormalItem(Item item) {
-        return !item.name.equals("Backstage passes to a TAFKAL80ETC concert") && !item.name.equals("Sulfuras, Hand of Ragnaros");
+        return !item.name.equals("Sulfuras, Hand of Ragnaros");
+    }
+
+    private boolean isBetween(int sellIn, int start, int end) {
+        return start <= sellIn && sellIn < end;
     }
 }
