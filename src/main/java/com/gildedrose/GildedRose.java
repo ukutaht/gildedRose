@@ -13,62 +13,12 @@ class GildedRose {
 
             if (isAgedBrie(item)) {
                 updateAgedBrie(item);
-            } else if(isSulfuras(item)) {
+            } else if (isSulfuras(item)) {
                 updateSulfuras(item);
-            }
-            else if (isBackStagePass(item)) {
+            } else if (isBackStagePass(item)) {
                 updateBackstagePass(item);
-            } else if (isNormalItem(item)) {
-                updateNormalItem(item);
             } else {
-
-                if (!item.name.equals("Aged Brie")
-                        && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                    if (item.quality > 0) {
-                        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                            item.quality = item.quality - 1;
-                        }
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-
-                        if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                            if (item.sellIn < 11) {
-                                if (item.quality < 50) {
-                                    item.quality = item.quality + 1;
-                                }
-                            }
-
-                            if (item.sellIn < 6) {
-                                if (item.quality < 50) {
-                                    item.quality = item.quality + 1;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                    item.sellIn = item.sellIn - 1;
-                }
-
-                if (item.sellIn < 0) {
-                    if (!item.name.equals("Aged Brie")) {
-                        if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                            if (item.quality > 0) {
-                                if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                                    item.quality = item.quality - 1;
-                                }
-                            }
-                        } else {
-                            item.quality = item.quality - item.quality;
-                        }
-                    } else {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
-                    }
-                }
+                updateNormalItem(item);
             }
         }
     }
@@ -117,10 +67,6 @@ class GildedRose {
         item.sellIn--;
         int newQuality = item.sellIn < 0 ? item.quality - 2 : item.quality - 1;
         item.quality = Math.max(newQuality, 0);
-    }
-
-    private boolean isNormalItem(Item item) {
-        return !item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
     private boolean isBetween(int sellIn, int start, int end) {
