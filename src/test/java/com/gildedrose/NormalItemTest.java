@@ -11,7 +11,6 @@ public class NormalItemTest {
     public static final int QUALITY = 15;
     private Item normalItem;
 
-
     @Before
     public void setUp(){
         setUp(SELL_IN, QUALITY);
