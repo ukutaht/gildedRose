@@ -1,16 +1,16 @@
 package com.gildedrose;
 
-class GildedRose {
-    Item[] items;
+import java.util.List;
 
-    public GildedRose(Item[] items) {
+class GildedRose {
+    List<Item> items;
+
+    public GildedRose(List<Item> items) {
         this.items = items;
     }
 
     public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
-            Item item = items[i];
-
+        for (Item item : items) {
             if (isAgedBrie(item)) {
                 updateAgedBrie(item);
             } else if (isSulfuras(item)) {

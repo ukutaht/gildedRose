@@ -21,13 +21,13 @@ public class BackStagePassTest {
     public void setUp() {
         backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", SELL_IN, QUALITY);
         items = Arrays.asList(backstagePass);
-        gildedRose = new GildedRose(items.toArray(new Item[0]));
+        gildedRose = new GildedRose(items);
     }
 
     public void setUp(int sellIn, int quality) {
         backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         items = Arrays.asList(backstagePass);
-        gildedRose = new GildedRose(items.toArray(new Item[0]));
+        gildedRose = new GildedRose(items);
     }
 
     @Test

@@ -21,7 +21,7 @@ public class NormalItemTest {
     public void setUp(){
         normalItem = new Item("foo", SELL_IN, QUALITY);
         items = Arrays.asList(normalItem);
-        gildedRose = new GildedRose(items.toArray(new Item[0]));
+        gildedRose = new GildedRose(items);
     }
 
     @Test

@@ -20,7 +20,7 @@ public class SulfurasTest {
     public void setUp(){
         sulfuras = new Item("Sulfuras, Hand of Ragnaros", SELL_IN, QUALITY);
         items = Arrays.asList(sulfuras);
-        gildedRose = new GildedRose(items.toArray(new Item[0]));
+        gildedRose = new GildedRose(items);
     }
 
     @Test

@@ -21,7 +21,7 @@ public class AgedBrieTest {
     public void setUp(){
         agedBrie = new Item("Aged Brie", SELL_IN, QUALITY);
         items = Arrays.asList(agedBrie);
-        gildedRose = new GildedRose(items.toArray(new Item[0]));
+        gildedRose = new GildedRose(items);
     }
 
     @Test

@@ -2,6 +2,9 @@ package com.gildedrose;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public class GoldenMaster {
@@ -10,7 +13,7 @@ public class GoldenMaster {
     public void run() {
         String result = "";
 
-        Item[] items = new Item[] {
+        List<Item> items = Arrays.asList(
                 new Item("+5 Dexterity Vest", 10, 20), // normal item
                 new Item("Aged Brie", 2, 0), //
                 new Item("Elixir of the Mongoose", 5, 7), //
@@ -20,7 +23,7 @@ public class GoldenMaster {
                 new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                new Item("Conjured Mana Cake", 3, 6) };
+                new Item("Conjured Mana Cake", 3, 6));
 
         GildedRose app = new GildedRose(items);
 
