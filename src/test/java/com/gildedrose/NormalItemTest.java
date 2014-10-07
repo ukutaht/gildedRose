@@ -7,16 +7,16 @@ import static org.junit.Assert.assertEquals;
 
 public class NormalItemTest {
 
-    public static final int SELL_IN = 10;
-    public static final int QUALITY = 15;
+    private static final int SELL_IN = 10;
+    private static final int QUALITY = 15;
     private Item normalItem;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         setUp(SELL_IN, QUALITY);
     }
 
-    public void setUp(int sellIn, int quality){
+    public void setUp(int sellIn, int quality) {
         normalItem = new Item("Item", sellIn, quality);
     }
 
@@ -38,7 +38,7 @@ public class NormalItemTest {
         normalItem.updateQuality();
 
         assertEquals(0, normalItem.quality);
-   }
+    }
 
     @Test
     public void itemQualityDegradesTwiceAsFastAfterSellByHasPassed() {

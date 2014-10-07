@@ -7,12 +7,12 @@ import static org.junit.Assert.assertEquals;
 
 public class SulfurasTest {
 
-    public static final int SELL_IN = 10;
-    public static final int QUALITY = 80;
+    private static final int SELL_IN = 10;
+    private static final int QUALITY = 80;
     private Item sulfuras;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         sulfuras = new Sulfuras(SELL_IN, QUALITY);
     }
 

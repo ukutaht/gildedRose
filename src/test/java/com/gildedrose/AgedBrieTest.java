@@ -9,17 +9,17 @@ import static org.junit.Assert.assertEquals;
 
 public class AgedBrieTest {
 
-    public static final int SELL_IN = 10;
-    public static final int QUALITY = 15;
+    private static final int SELL_IN = 10;
+    private static final int QUALITY = 15;
     private Item agedBrie;
     private static int MAX_QUALITY = 50;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         setUp(SELL_IN, QUALITY);
     }
 
-    public void setUp(int sellIn, int quality){
+    public void setUp(int sellIn, int quality) {
         agedBrie = new AgedBrie(sellIn, quality);
     }
 

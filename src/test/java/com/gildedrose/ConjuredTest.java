@@ -7,16 +7,16 @@ import static org.junit.Assert.assertEquals;
 
 public class ConjuredTest {
 
-    public static final int SELL_IN = 10;
-    public static final int QUALITY = 15;
+    private static final int SELL_IN = 10;
+    private static final int QUALITY = 15;
     private Item conjured;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         setUp(SELL_IN, QUALITY);
     }
 
-    public void setUp(int sellIn, int quality){
+    public void setUp(int sellIn, int quality) {
         conjured = new Conjured(sellIn, quality);
     }
 

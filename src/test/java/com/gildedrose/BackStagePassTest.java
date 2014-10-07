@@ -7,8 +7,8 @@ import static org.junit.Assert.assertEquals;
 
 public class BackStagePassTest {
 
-    public static final int SELL_IN = 20;
-    public static final int QUALITY = 15;
+    private static final int SELL_IN = 20;
+    private static final int QUALITY = 15;
     private Item backstagePass;
     private static int MAX_QUALITY = 50;
 

@@ -3,7 +3,7 @@ package com.gildedrose;
 import java.util.List;
 
 class GildedRose {
-    List<Item> items;
+    private List<Item> items;
 
     public GildedRose(List<Item> items) {
         this.items = items;
