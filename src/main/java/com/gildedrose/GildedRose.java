@@ -12,7 +12,8 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             if (isAgedBrie(item)) {
-                updateAgedBrie(item);
+                AgedBrie theItem = (AgedBrie) item;
+                theItem.updateQuality();
             } else if (isSulfuras(item)) {
                 updateSulfuras(item);
             } else if (isBackStagePass(item)) {
@@ -51,12 +52,6 @@ class GildedRose {
 
     private boolean isBackStagePass(Item item) {
         return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
-    }
-
-    private void updateAgedBrie(Item item) {
-        item.sellIn--;
-        int newQuality = item.sellIn < 0 ? item.quality + 2 : item.quality + 1;
-        item.quality = Math.min(newQuality, 50);
     }
 
     private boolean isAgedBrie(Item item) {
