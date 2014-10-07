@@ -11,22 +11,12 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (isAgedBrie(item)) {
-                AgedBrie theItem = (AgedBrie) item;
-                theItem.updateQuality();
-            } else if (isSulfuras(item)) {
-                Sulfuras theItem = (Sulfuras) item;
-                theItem.updateQuality();
-            } else if (isBackStagePass(item)) {
+            if (isBackStagePass(item)) {
                 updateBackstagePass(item);
             } else {
-                updateNormalItem(item);
+                item.updateQuality();
             }
         }
-    }
-
-    private boolean isSulfuras(Item item) {
-      return item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
     private void updateBackstagePass(Item item) {
@@ -49,14 +39,6 @@ class GildedRose {
 
     private boolean isBackStagePass(Item item) {
         return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
-    }
-
-    private boolean isAgedBrie(Item item) {
-        return item.name.equals("Aged Brie");
-    }
-
-    private void updateNormalItem(Item item) {
-        item.updateQuality();
     }
 
     private boolean isBetween(int sellIn, int start, int end) {
