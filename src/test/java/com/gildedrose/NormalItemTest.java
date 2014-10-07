@@ -14,7 +14,11 @@ public class NormalItemTest {
 
     @Before
     public void setUp(){
-        normalItem = new Item("foo", SELL_IN, QUALITY);
+        setUp(SELL_IN, QUALITY);
+    }
+
+    public void setUp(int sellIn, int quality){
+        normalItem = new Item("Item", sellIn, quality);
     }
 
     @Test
@@ -31,19 +35,17 @@ public class NormalItemTest {
 
     @Test
     public void itemQualityDoesNotGoBelowZero() {
-        for (int i = 0; i < QUALITY + 2; i++) {
-            normalItem.updateQuality();
-        }
+        setUp(10, 0);
+        normalItem.updateQuality();
 
         assertEquals(0, normalItem.quality);
    }
 
     @Test
     public void itemQualityDegradesTwiceAsFastAfterSellByHasPassed() {
-        for (int i = 0; i < SELL_IN + 1; i++) {
-            normalItem.updateQuality();
-        }
+        setUp(0, 10);
+        normalItem.updateQuality();
 
-        assertEquals(QUALITY - SELL_IN - 2, normalItem.quality);
+        assertEquals(8, normalItem.quality);
     }
 }

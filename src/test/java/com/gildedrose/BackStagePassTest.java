@@ -14,7 +14,7 @@ public class BackStagePassTest {
 
     @Before
     public void setUp() {
-        backstagePass = new BackStagePass( SELL_IN, QUALITY);
+        setUp(SELL_IN, QUALITY);
     }
 
     public void setUp(int sellIn, int quality) {

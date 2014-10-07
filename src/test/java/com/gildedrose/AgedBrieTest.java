@@ -16,7 +16,11 @@ public class AgedBrieTest {
 
     @Before
     public void setUp(){
-        agedBrie = new AgedBrie(SELL_IN, QUALITY);
+        setUp(SELL_IN, QUALITY);
+    }
+
+    public void setUp(int sellIn, int quality){
+        agedBrie = new AgedBrie(sellIn, quality);
     }
 
     @Test
@@ -33,18 +37,17 @@ public class AgedBrieTest {
 
     @Test
     public void qualityIncreasesTwiceAsFastAfterSellIn() {
-        for (int i = 0; i < SELL_IN + 1; i++) {
-            agedBrie.updateQuality();
-        }
+        setUp(0, 10);
+        agedBrie.updateQuality();
 
-        assertEquals(SELL_IN + QUALITY + 2, agedBrie.quality);
+        assertEquals(12, agedBrie.quality);
     }
 
     @Test
-    public void qualityisCapped() {
-        for (int i = 0; i < MAX_QUALITY; i++) {
-            agedBrie.updateQuality();
-        }
+    public void qualityIsCapped() {
+        setUp(10, MAX_QUALITY);
+        agedBrie.updateQuality();
+
         assertEquals(MAX_QUALITY, agedBrie.quality);
     }
 }
