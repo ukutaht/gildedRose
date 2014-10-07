@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class GildedRoseTest {
+public class NormalItemTest {
 
     public static final int SELL_IN = 10;
     public static final int QUALITY = 15;
@@ -47,10 +47,10 @@ public class GildedRoseTest {
 
     @Test
     public void itemQualityDegradesTwiceAsFastAfterSellByHasPassed() {
-        for (int i = 0; i < SELL_IN + 2; i++) {
+        for (int i = 0; i < SELL_IN + 1; i++) {
             gildedRose.updateQuality();
         }
 
-        assertEquals(QUALITY - 14, normalItem.quality);
+        assertEquals(QUALITY - SELL_IN - 2, normalItem.quality);
     }
 }

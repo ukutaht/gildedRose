@@ -11,7 +11,9 @@ class GildedRose {
         for (int i = 0; i < items.length; i++) {
             Item item = items[i];
 
-            if (isNormalItem(item)) {
+            if (isAgedBrie(item)) {
+                updateAgedBrie(item);
+            } else if (isNormalItem(item)) {
                 updateNormalItem(item);
             } else {
 
@@ -67,6 +69,16 @@ class GildedRose {
         }
     }
 
+    private void updateAgedBrie(Item item) {
+        item.sellIn--;
+        int newQuality = item.sellIn < 0 ? item.quality + 2 : item.quality + 1;
+        item.quality = Math.min(newQuality, 50);
+    }
+
+    private boolean isAgedBrie(Item item) {
+        return item.name.equals("Aged Brie");
+    }
+
     private void updateNormalItem(Item item) {
         item.sellIn--;
         int newQuality = item.sellIn < 0 ? item.quality - 2 : item.quality - 1;
@@ -74,6 +86,6 @@ class GildedRose {
     }
 
     private boolean isNormalItem(Item item) {
-        return !item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert") && !item.name.equals("Sulfuras, Hand of Ragnaros");
+        return !item.name.equals("Backstage passes to a TAFKAL80ETC concert") && !item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 }
