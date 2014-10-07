@@ -13,7 +13,10 @@ class GildedRose {
 
             if (isAgedBrie(item)) {
                 updateAgedBrie(item);
-            } else if (isBackStagePass(item)) {
+            } else if(isSulfuras(item)) {
+                updateSulfuras(item);
+            }
+            else if (isBackStagePass(item)) {
                 updateBackstagePass(item);
             } else if (isNormalItem(item)) {
                 updateNormalItem(item);
@@ -68,6 +71,13 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private void updateSulfuras(Item item) {
+    }
+
+    private boolean isSulfuras(Item item) {
+      return item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
     private void updateBackstagePass(Item item) {
