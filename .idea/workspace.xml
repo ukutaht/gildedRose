@@ -27,30 +27,18 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GildedRoseTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GildedRoseTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.8551618" vertical-offset="30" max-vertical-offset="705">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoldenMaster.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenMaster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32357472" vertical-offset="0" max-vertical-offset="720">
-              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -79,11 +67,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/guildedrose/GuildedRose.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/guildedrose/GuildedRoseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/GuildedRose.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenOutput.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenMaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" />
       </list>
     </option>
   </component>
@@ -511,15 +500,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.6733437" vertical-offset="0" max-vertical-offset="5100">
-          <caret line="332" column="17" selection-start-line="332" selection-start-column="17" selection-end-line="332" selection-end-column="17" />
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -527,26 +508,34 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state vertical-scroll-proportion="1.5023112" vertical-offset="0" max-vertical-offset="5100">
+          <caret line="65" column="60" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GoldenMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32357472" vertical-offset="0" max-vertical-offset="720">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.4622496" vertical-offset="0" max-vertical-offset="720">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8551618" vertical-offset="30" max-vertical-offset="705">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
