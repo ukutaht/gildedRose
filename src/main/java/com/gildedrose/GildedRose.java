@@ -64,9 +64,7 @@ class GildedRose {
     }
 
     private void updateNormalItem(Item item) {
-        item.sellIn--;
-        int newQuality = item.sellIn < 0 ? item.quality - 2 : item.quality - 1;
-        item.quality = Math.max(newQuality, 0);
+        item.updateQuality();
     }
 
     private boolean isBetween(int sellIn, int start, int end) {

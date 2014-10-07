@@ -18,4 +18,10 @@ public class Item {
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    public void updateQuality() {
+        sellIn--;
+        int newQuality = sellIn < 0 ? quality - 2 : quality - 1;
+        quality = Math.max(newQuality, 0);
+    }
 }
